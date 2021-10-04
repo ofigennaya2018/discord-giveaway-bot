@@ -17,7 +17,7 @@ module.exports = {
             }
         } else {
             if (!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")) {
-                return message.channel.send(':boom: Вам нужно иметь \`MANAGE_MESSAGES\` разрешения на раздачу подарков.
+                return message.channel.send(':boom: Вам нужно иметь \`MANAGE_MESSAGES\` разрешения на раздачу подарков.');
 ');
             }
         }
