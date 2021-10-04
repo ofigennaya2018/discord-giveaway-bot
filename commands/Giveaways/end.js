@@ -1,20 +1,20 @@
 module.exports = {
     config: {
         name: "end",
-        description: "Ends a giveaway.",
+        description: "Завершает розыгрыш.",
         usage: "[message-id]",
-        category: "Giveaways",
-        accessableby: "Admins",
-        aliases: [], // To add custom aliases just type ["alias1", "alias2"].
+        category: "Подарки",
+        accessableby: "Админы",
+        aliases: [], // Чтобы добавить собственные псевдонимы, просто введите ["alias1", "alias2"].
     },
     run: async (client, message, args) => {
 
         if (!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")) {
-            return message.channel.send(':boom: You need to have the \`MANAGE_MESSAGES\` permissions to end giveaways.');
+            return message.channel.send(':boom: Вам нужно иметь \`MANAGE_MESSAGES\` разрешения на прекращение розыгрышей.');
         }
 
         if (!args[0]) {
-            return message.channel.send(':boom: Uh oh, I couldn\'t find that message! Try again!');
+            return message.channel.send(':boom: Ой, я не могу найти это сообщение! Попробуйте снова!');
         }
 
         let giveaway =
@@ -22,7 +22,7 @@ module.exports = {
             client.giveawaysManager.giveaways.find((g) => g.messageID === args[0]);
 
         if (!giveaway) {
-            return message.channel.send(':boom: Hm. I can\'t seem to find a giveaway for `' + args.join(' ') + '`.');
+            return message.channel.send(':boom: Хм. Я не могу подарить `' + args.join(' ') + '`.');
         }
         client.giveawaysManager.edit(giveaway.messageID, {
             setEndTimestamp: Date.now()
@@ -31,13 +31,13 @@ module.exports = {
                 message.channel.send('Giveaway will end in less than ' + (client.giveawaysManager.options.updateCountdownEvery / 1000) + ' seconds...');
             })
             .catch((e) => {
-                if (e.startsWith(`Giveaway with message ID ${giveaway.messageID} has already ended.`)) {
+                if (e.startsWith(`Розыгрыш с идентификатором сообщения ${giveaway.messageID} уже закончился.`)) {
 
-                    message.channel.send('This giveaway has already ended!');
+                    message.channel.send('Эта раздача уже закончилась!');
 
                 } else {
                     console.error(e);
-                    message.channel.send('An error occurred...');
+                    message.channel.send('Эта раздача уже закончилась...');
                 }
             });
     },
