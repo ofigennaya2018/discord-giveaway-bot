@@ -49,10 +49,10 @@ module.exports = {
                 winnerCount: parseInt(giveawayNumberWinners),
                 hostedBy: config["Giveaway_Options"].hostedBy ? message.author : null,
                 messages: {
-                    giveaway: ":tada: **КОНКУРС** :tada:",
-                    giveawayEnded: ":tada: **КОНКУРС ЗАВЕРШЕН** :tada:",
+                    giveaway: ":gem: **КОНКУРС** :gem:",
+                    giveawayEnded: ":gem: **КОНКУРС ЗАВЕРШЕН** :gem:",
                     timeRemaining: "Осталось времени: **{duration}**!",
-                    inviteToParticipate: "Поставь реакцию на 🎉 что бы участвовать!",
+                    inviteToParticipate: "Поставь реакцию на 💎 что бы участвовать!",
                     winMessage: "Поздравляем, {winners}! Вы выиграли **{prize}**!",
                     embedFooter: "Подарки",
                     noWinner: "Недостаточно участников для определения победителя!",
@@ -77,10 +77,10 @@ module.exports = {
                 winnerCount: parseInt(giveawayNumberWinners),
                 hostedBy: config["Giveaway_Options"].hostedBy ? message.author : null,
                 messages: {
-                    giveaway: (config["Giveaway_Options"].showMention ? `<@&${config["Giveaway_Options"].giveawayRoleID}>\n\n` : "") + ":tada: **КОНКУРС** :tada:",
-                    giveawayEnded: (config["Giveaway_Options"].showMention ? `<@&${config["Giveaway_Options"].giveawayRoleID}>\n\n` : "") + ":tada: **КОНКУРС ЗАВЕРШЕН** :tada:",
+                    giveaway: (config["Giveaway_Options"].showMention ? `<@&${config["Giveaway_Options"].giveawayRoleID}>\n\n` : "") + ":gem: **КОНКУРС** :gem:",
+                    giveawayEnded: (config["Giveaway_Options"].showMention ? `<@&${config["Giveaway_Options"].giveawayRoleID}>\n\n` : "") + ":gem: **КОНКУРС ЗАВЕРШЕН** :gem:",
                     timeRemaining: "Осталось времени: **{duration}**!",
-                    inviteToParticipate: "Поставь реакцию на 🎉 что бы участвовать!",
+                    inviteToParticipate: "Поставь реакцию на 💎 что бы участвовать!",
                     winMessage: "Поздравляем, {winners}! Вы выиграли **{prize}**!",
                     embedFooter: "Подарки",
                     noWinner: "Недостаточно участников для определения победителя!",
@@ -105,10 +105,10 @@ module.exports = {
                 winnerCount: parseInt(giveawayNumberWinners),
                 hostedBy: config["Giveaway_Options"].hostedBy ? message.author : null,
                 messages: {
-                    giveaway: ":tada: **КОНКУРС** :tada:",
-                    giveawayEnded: ":tada: **КОНКУРС ЗАВЕРШЕН** :tada:",
+                    giveaway: ":gem: **КОНКУРС** :gem:",
+                    giveawayEnded: ":gem: **КОНКУРС ЗАВЕРШЕН** :gem:",
                     timeRemaining: "Осталось времени: **{duration}**!",
-                    inviteToParticipate: "Поставь реакцию на 🎉 что бы участвовать!",
+                    inviteToParticipate: "Поставь реакцию на 💎 что бы участвовать!",
                     winMessage: "Поздравляем, {winners}! Вы выиграли **{prize}**!",
                     embedFooter: "Подарки",
                     noWinner: "Недостаточно участников для определения победителя!",
@@ -132,10 +132,10 @@ module.exports = {
                 winnerCount: parseInt(giveawayNumberWinners),
                 hostedBy: config["Giveaway_Options"].hostedBy ? message.author : null,
                 messages: {
-                    giveaway: (config["Giveaway_Options"].showMention ? `@everyone\n\n` : "") + ":tada: **КОНКУРС** :tada:",
-                    giveawayEnded: (config["Giveaway_Options"].showMention ? `@everyone\n\n` : "") + ":tada: **КОНКУРС ЗАВЕРШЕН** :tada:",
+                    giveaway: (config["Giveaway_Options"].showMention ? `@everyone\n\n` : "") + ":gem: **КОНКУРС** :gem:",
+                    giveawayEnded: (config["Giveaway_Options"].showMention ? `@everyone\n\n` : "") + ":gem: **КОНКУРС ЗАВЕРШЕН** :gem:",
                     timeRemaining: "Осталось времени: **{duration}**!",
-                    inviteToParticipate: "Поставь реакцию на 🎉 что бы участвовать!",
+                    inviteToParticipate: "Поставь реакцию на 💎 что бы участвовать!",
                     winMessage: "Поздравляем, {winners}! Вы выиграли **{prize}**!",
                     embedFooter: "Подарки",
                     noWinner: "Недостаточно участников для определения победителя!",
@@ -158,10 +158,10 @@ module.exports = {
                 winnerCount: parseInt(giveawayNumberWinners),
                 hostedBy: config["Giveaway_Options"].hostedBy ? message.author : null,
                 messages: {
-                    giveaway: ":tada: **КОНКУРС** :tada:",
-                    giveawayEnded: ":tada: **КОНКУРС ЗАВЕРШЕН** :tada:",
+                    giveaway: ":gem: **КОНКУРС** :gem:",
+                    giveawayEnded: ":gem: **КОНКУРС ЗАВЕРШЕН** :gem:",
                     timeRemaining: "Осталось времени: **{duration}**!",
-                    inviteToParticipate: "Поставь реакцию на 🎉 что бы участвовать!",
+                    inviteToParticipate: "Поставь реакцию на 💎 что бы участвовать!",
                     winMessage: "Поздравляем, {winners}! Вы выиграли **{prize}**!",
                     embedFooter: "Подарки",
                     noWinner: "Недостаточно участников для определения победителя!",
@@ -180,6 +180,6 @@ module.exports = {
         }
 
 
-        message.channel.send(`:tada: Конкурс! Розыгрыш приза \`${giveawayPrize}\` только здесь в ${giveawayChannel}!`);
+        message.channel.send(`:gem: Конкурс! Розыгрыш приза \`${giveawayPrize}\` только здесь в ${giveawayChannel}!`);
     }
 }
