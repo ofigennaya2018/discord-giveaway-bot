@@ -180,6 +180,6 @@ module.exports = {
         }
 
 
-        message.channel.send(`:tada: Done! The giveaway for the \`${giveawayPrize}\` is starting in ${giveawayChannel}!`);
+        message.channel.send(`:tada: Конкурс! Розыгрыш приза \`${giveawayPrize}\` только здесь в ${giveawayChannel}!`);
     }
 }
