@@ -6,7 +6,7 @@ module.exports = async client => {
 
 
   let statuses = [
-    `${config["Bot_Info"].prefix}start | ${config["Bot_Info"].prefix}help `,
+    `${config["Bot_Info"].prefix}старт | ${config["Bot_Info"].prefix}help `,
   ]
 
   setInterval(function () {
