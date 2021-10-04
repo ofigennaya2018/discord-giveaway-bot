@@ -3,8 +3,8 @@ module.exports = {
         name: "end",
         description: "Завершает розыгрыш.",
         usage: "[message-id]",
-        category: "Подарки",
-        accessableby: "Админы",
+        category: "Giveaways",
+        accessableby: "Admins",
         aliases: [], // Чтобы добавить собственные псевдонимы, просто введите ["alias1", "alias2"].
     },
     run: async (client, message, args) => {
