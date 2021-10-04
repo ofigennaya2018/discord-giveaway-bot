@@ -20,11 +20,11 @@ module.exports = {
       .setAuthor(
         client.user.username,
         client.user.displayAvatarURL({ ...avatarOptions }),
-        'https://github.com/ofigennaya2018/discord-giveaway-bot'
+        'https://discord.gg/KjZ5PUM'
       )
       .setThumbnail(client.user.displayAvatarURL({ ...avatarOptions }))
       .setTitle('Help')
-      .setURL('https://github.com/ofigennaya2018/discord-giveaway-bot')
+      .setURL('https://discord.gg/KjZ5PUM')
       .setColor('7289da')
       .setDescription(`Заходите к нам в гости \n[ссылка!](https://discord.gg/KjZ5PUM)`)
       .addFields({
