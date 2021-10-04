@@ -3,19 +3,19 @@ const config = require("../../config.json")
 module.exports = {
     config: {
         name: "reroll",
-        description: "Rerolls a giveaway.",
+        description: "Повторяет раздачу.",
         usage: "[message-id]",
-        category: "Giveaways",
-        accessableby: "Admins",
-        aliases: [], // To add custom aliases just type ["alias1", "alias2"].
+        category: "Подарки",
+        accessableby: "Админы",
+        aliases: [], // Чтобы добавить собственные псевдонимы, просто введите ["alias1", "alias2"].
     },
     run: async (client, message, args) => {
         if (!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")) {
-            return message.channel.send(':boom: You need to have the \`MANAGE_MESSAGES\` permission to reroll giveaways.');
+            return message.channel.send(':boom: Вам нужно иметь \`MANAGE_MESSAGES\` разрешение на повторный розыгрыш призов..');
         }
 
         if (!args[0]) {
-            return message.channel.send(':boom: Uh oh, I couldn\'t find that message! Try again!');
+            return message.channel.send(':boom: Ой, я не могу найти это сообщение! Попробуйте снова!');
         }
 
         let giveaway =
@@ -23,19 +23,19 @@ module.exports = {
             client.giveawaysManager.giveaways.find((g) => g.messageID === args[0]);
 
         if (!giveaway) {
-            return message.channel.send(':boom: Hm. I can\'t seem to find a giveaway for `' + args.join(' ') + '`.');
+            return message.channel.send(':boom: Хм. Я не могу найти раздачу за `' + args.join(' ') + '`.');
         }
 
         client.giveawaysManager.reroll(giveaway.messageID)
             .then(() => {
-                message.channel.send('Giveaway rerolled!');
+                message.channel.send('Розыгрыш разыгрался повторно'!');
             })
             .catch((e) => {
-                if (e.startsWith(`Giveaway with message ID ${giveaway.messageID} has not ended.`)) {
-                    message.channel.send('This giveaway has not ended!');
+                if (e.startsWith(`Розыгрыш с идентификатором сообщения ${giveaway.messageID} не закончился.`)) {
+                    message.channel.send('Этот конкурс не закончился!');
                 } else {
                     console.error(e);
-                    message.channel.send('An error occurred...');
+                    message.channel.send('Произошла ошибка...');
                 }
             });
     },
