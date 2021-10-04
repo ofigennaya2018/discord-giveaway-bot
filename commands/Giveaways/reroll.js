@@ -28,7 +28,7 @@ module.exports = {
 
         client.giveawaysManager.reroll(giveaway.messageID)
             .then(() => {
-                message.channel.send('Розыгрыш разыгрался повторно'!');
+                message.channel.send('Розыгрыш разыгрался повторно!');
             })
             .catch((e) => {
                 if (e.startsWith(`Розыгрыш с идентификатором сообщения ${giveaway.messageID} не закончился.`)) {
