@@ -5,8 +5,8 @@ module.exports = {
         name: "reroll",
         description: "Повторяет раздачу.",
         usage: "[message-id]",
-        category: "Подарки",
-        accessableby: "Админы",
+        category: "Giveaways",
+        accessableby: "Admins",
         aliases: [], // Чтобы добавить собственные псевдонимы, просто введите ["alias1", "alias2"].
     },
     run: async (client, message, args) => {
