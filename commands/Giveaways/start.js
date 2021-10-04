@@ -8,7 +8,7 @@ module.exports = {
         usage: "[channel] [duration] [winners] [prize]",
         category: "Giveaways",
         accessableby: "Admins",
-        aliases: [], // To add custom aliases just type ["alias1", "alias2"].
+        aliases: [], // Чтобы добавить собственные псевдонимы, просто введите ["alias1", "alias2"].
     },
     run: async (client, message, args) => {
         if (config["Giveaway_Options"].giveawayManagerID) {
@@ -16,9 +16,8 @@ module.exports = {
                 return message.channel.send(':boom: Вам нужно иметь \`MANAGE_MESSAGES\` разрешения на раздачу подарков.');
             }
         } else {
-            if (!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")) {
+            if (!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaway")) {
                 return message.channel.send(':boom: Вам нужно иметь \`MANAGE_MESSAGES\` разрешения на раздачу подарков.');
-');
             }
         }
 
