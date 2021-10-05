@@ -28,7 +28,7 @@ module.exports = {
             setEndTimestamp: Date.now()
         })
             .then(() => {
-                message.channel.send('Розыгрыш закончится менее чем через' + (client.giveawaysManager.options.updateCountdownEvery / 1000) + ' seconds...');
+                message.channel.send('Розыгрыш закончится менее чем через ' + (client.giveawaysManager.options.updateCountdownEvery / 1000) + ' seconds...');
             })
             .catch((e) => {
                 if (e.startsWith(`Розыгрыш с идентификатором сообщения ${giveaway.messageID} уже закончился.`)) {
