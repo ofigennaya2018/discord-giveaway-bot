@@ -180,6 +180,6 @@ module.exports = {
         }
 
 
-        message.channel.send(`:gem: Конкурс! Розыгрыш приза \`${giveawayPrize}\` только здесь в ${giveawayChannel}!`);
+        message.channel.send(`:loudspeaker: Конкурс! Розыгрыш приза \`${giveawayPrize}\` только здесь в ${giveawayChannel}!`);
     }
 }
